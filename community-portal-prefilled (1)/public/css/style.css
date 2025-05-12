@@ -10,47 +10,107 @@ body{
     color: whitesmoke;
 }
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||Home Page|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-/*Title cards*/
-.title-cards{
-    margin-left: 40vw;
+/* General Styles */
+body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Welcome Message */
+#Welcome {
+    text-align: center;
+    font-size: 2.5rem;
+    color: orangered;
+    margin: 40px auto;
+    padding: 0 20px;
+    max-width: 1000px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid #333;
+    padding-bottom: 20px;
+}
+
+/* Upcoming Events Section */
+#upcoming-events {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+#upcoming-events h3 {
+    font-size: 1.8rem;
+    color: orangered;
+    margin-bottom: 30px;
+    border-left: 4px solid orangered;
+    padding-left: 15px;
+}
+
+.event-grid {
     display: grid;
-    grid-template-columns: 20vw 20vw 20vw;
-    grid-template-rows: 18vw;
-    grid-gap: 2em;
-    height: 18vh;
-    background-color: orangered;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
 }
 
-.title-cards > div{
-    margin: 1em;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.event-block {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    border-left: 4px solid orangered;
 }
 
-.title-cards button{
-    background-color: rgb(7, 240, 248);
-    border: 0;
-    outline: 0;
-    cursor: pointer;
+.event-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 69, 0, 0.1);
 }
 
-#AboutCard{
-    background-repeat: no-repeat;
-    background-size: 18vh;
-    background-position: center;
+.event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #333;
 }
 
-nav{
-    background-color: black;
-    height: 18vh;
-    margin-bottom: 5vh;
-    background-image: url(../images/CampusLogo.png);
-    background-repeat: no-repeat;
+.event-details {
+    padding: 20px;
 }
 
-#Welcome{
-    margin: 50px 29% 50px;
+.event-details h3 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.event-date, .event-location {
+    color: #aaa;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.event-date::before, .event-location::before {
+    content: "•";
+    color: orangered;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.event-description {
+    color: #ddd;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.no-events {
+    text-align: center;
+    color: #aaa;
+    font-size: 1.2rem;
+    padding: 40px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    border-left: 4px solid orangered;
 }
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||Contact Page|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 #ContactBody{
