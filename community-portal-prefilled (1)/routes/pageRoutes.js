@@ -135,4 +135,12 @@ router.get('/thankyou', (req, res) => {
   }
 });
 
+// Catch-all route for undefined paths within pageRoutes
+router.use((req, res, next) => {
+  res.status(404).render('pages/404', {
+    pageTitle: 'Page Not Found',
+    currentYear: new Date().getFullYear(),
+  });
+});
+
 module.exports = router;

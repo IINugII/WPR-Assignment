@@ -24,6 +24,11 @@ app.post("/contact", (req, res) => {
   res.render("pages/thankyou", { name }); // Pass the name to the thankyou.ejs template
 });
 
+// Handle 404 errors
+app.use((req, res) => {
+  res.status(404).render("pages/404"); // Render the custom 404 page
+});
+
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
