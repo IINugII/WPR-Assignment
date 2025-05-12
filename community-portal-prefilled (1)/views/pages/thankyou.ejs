@@ -3,14 +3,14 @@
 <body>
     <!--Load a nice background image into the body-->
 
-    <div id="ThanksMessage">Thank you +name for saving your response</div>
+<div id="ThanksMessage">
+  Thank you <%= name %> for contacting us!
+</div>
 
-    <div id="OtherResponseOptions">
-        <h3>-------------------Here are some things you can do next-------------------</h3>
-        <button>Submit another response</button>
-        <button>View my response</button>
-        <button>Return back to the Home Page</button>
-    </div>
+<div id="OtherResponseOptions">
+  <a href="/contact" class="button">Submit another response</a>
+  <a href="/" class="button">Return to Home Page</a>
+</div>
 
     <footer>
         <%- include('../partials/footer.ejs') %> <!--Includes the Footer element from the partials file-->

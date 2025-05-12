@@ -3,39 +3,34 @@
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><!--Insert an extra link to include icons used on the form-->
 <body id="ContactBody">
   <div class="wrapper">
-    <form method="POST" action="/contact">
-      <h1>Contact us</h1>
+    <!-- Fix form field names and structure -->
+  <form method="POST" action="/contact">
+    <h1>Contact us</h1>
 
-      <div class="input-box">
-        <div class="input-field">
-          <input type="text", placeholder="Name" required>
-          <i class='bx bxs-user'></i>
-        </div>
-
-        <div class="input-field">
-          <input type="text", placeholder="Surname" required>
-          <i class='bx bxs-user'></i>
-        </div>
+    <div class="input-box">
+      <div class="input-field">
+        <input type="text" name="name" placeholder="Name" required>
+        <i class='bx bxs-user'></i>
       </div>
 
-      <div class="input-box">
-        <div class="input-field">
-          <input type="email", placeholder="Email" required>
-          <i class='bx bxs-envelope' ></i>
-        </div>
-
-        <div class="input-field">
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <i class='bx bxs-message-detail' ></i>
-        </div>
+      <div class="input-field">
+        <input type="email" name="email" placeholder="Email" required>
+        <i class='bx bxs-envelope'></i>
       </div>
+    </div>
 
-      <label><input type="checkbox">
-        I Agree to recieve feedback from Belgium Campus regarding my message, as well as special events that Belgium Campus offers
-      </label>
+    <div class="input-field">
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <i class='bx bxs-message-detail'></i>
+    </div>
 
-      <button type="Submit">Submit</button>
-    </form>
+    <label>
+      <input type="checkbox" name="subscribe" value="true">
+      I agree to receive updates
+    </label>
+
+    <button type="submit">Submit</button>
+  </form>
   </div>
 
   <br>

@@ -1,7 +1,7 @@
 <html lang="en">
 <%- include('../partials/header.ejs') %> <!--Includes the HEAD element from the partials file-->
 <body>
-    <nav><!--The NAV on the home page is not included in the partials folder, as the home page nav looks different from the other pages-->
+    <nav>                                <!--The NAV on the home page is not included in the partials folder, as the home page nav looks different from the other pages-->
         <div class="title-cards">
             <div id="AboutCard">
                 <div class="Menu">
@@ -13,14 +13,14 @@
             <div id="EventsCard">
                 <div class="Menu">
                     <h2>Events</h2>
-                    <button type="button"><a href="/events"></a>View Events</button>
+                    <button type="button"><a href="/events">View Events</a></button>
                 </div>
             </div>
 
             <div id="ContactCard">
                 <div class="Menu">
                     <h2>Contact Us</h2>
-                    <button type="button"><a href="/contact"></a>Get into Contact</button>
+                    <button type="button"><a href="/contact">Get into Contact</a></button>
                 </div>
             </div>
         </div>
@@ -28,29 +28,33 @@
 
     <h1 id="Welcome">Welcome to the Belgium Campus Community Portal</h1>
 
-    <h3>Upcoming Events:</h3>
-
-    <div id="UpcommingEvents">
-        <div id="DisplayEvent">
-            <!--The 5 approaching events should be displayed here-->
-            <!--These are just some placeholder values-->
-            <h2>Event Title</h2>
-            <p>Event Details</p>
-            <p>This event will start:</p>
-            <p>Event Date</p>
-            <p>This event is organised by:</p>
-            <p>Organiser</p>
+    <div id="upcoming-events">
+    <% if (upcomingEvents.length > 0) { %>
+        <h3>Upcoming Events:</h3>
+        <div class="event-grid">
+        <% upcomingEvents.forEach(event => { %>
+            <div class="event-block">  <!-- Changed from event-card to match events page -->
+            <% if (event.image) { %>
+                <img src="<%= event.image %>" alt="<%= event.title %>" class="event-image">
+            <% } %>
+            <div class="event-details">
+                <h3><%= event.title %></h3>
+                <p class="event-date">📅 <%= new Date(event.date).toLocaleDateString() %></p>
+                <p class="event-location">📍 <%= event.location %></p>
+                <% if (event.description) { %>
+                <p class="event-description"><%= event.description %></p>
+                <% } %>
+            </div>
+            </div>
+        <% }); %>
         </div>
+    <% } else { %>
+        <p class="no-events">No upcoming events scheduled. Check back later!</p>
+    <% } %>
     </div>
 
-    <ul>
-      <% upcomingEvents.forEach(event => { %>
-      <li><strong><%= event.title %></strong> on <%= event.date %> at <%= event.location %></li>
-      <% }) %>
-    </ul>
-
     <footer>
-        <%- include('../partials/footer.ejs') %> <!--Includes the Footer element from the partials file-->
+        <%- include('../partials/footer.ejs') %>   <!--Includes the Footer element from the partials file-->
     </footer>
 </body>
 </html>

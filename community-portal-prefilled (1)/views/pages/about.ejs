@@ -12,33 +12,49 @@
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quas asperiores possimus incidunt recusandae atque saepe delectus accusamus aut doloribus! Fugiat a quibusdam saepe dolores officia excepturi ab labore laboriosam.</p>
     </div>
 
-    <div id="AboutTeam">
-        <h3>About the team</h3>
-        <div id="Member1">
-            <p>Name: <!--Gather name from object stuffs--></p>
-            <p>Education: </p>
-            <p>Role:</p>
-            <p>Picture:</p>
+<div id="AboutTeam">
+  <h3>About the team</h3>
+  <div class="team-grid">
+    <% teamMembers.forEach(member => { %>
+      <div class="team-member">
+        <div class="member-card">
+          <img src="<%= member.image %>" alt="<%= member.name %>" class="member-photo">
+          <div class="member-info">
+            <h4 class="member-name"><%= member.name %></h4>
+            <p class="member-role"><em><%= member.role %></em></p>
+            
+            <ul class="member-details">
+              <% if (member.education) { %>
+                <li><strong>Education:</strong> <%= member.education %></li>
+              <% } %>
+              
+              <% if (member.responsibilities) { %>
+                <li><strong>Responsibilities:</strong>
+                  <ul>
+                    <% member.responsibilities.forEach(responsibility => { %>
+                      <li><%= responsibility %></li>
+                    <% }); %>
+                  </ul>
+                </li>
+              <% } %>
+              
+              <% if (member.bio) { %>
+                <li><strong>Bio:</strong> <%= member.bio %></li>
+              <% } %>
+              
+              <% if (member.email) { %>
+                <li><strong>Contact:</strong> 
+                  <a href="mailto:<%= member.email %>"><%= member.email %></a>
+                </li>
+              <% } %>
+            </ul>
+          </div>
         </div>
-
-        <div id="Member2">
-            <p>Name: <!--Gather name from object stuffs--></p>
-            <p>Education: </p>
-            <p>Role:</p>
-        </div>
-
-        <div id="Member3">
-            <p>Name: <!--Gather name from object stuffs--></p>
-            <p>Education: </p>
-            <p>Role:</p>
-        </div>
-
-        <div id="Member4">
-            <p>Name: <!--Gather name from object stuffs--></p>
-            <p>Education: </p>
-            <p>Role:</p>
-        </div>
-    </div>
+      </div>
+    <% }); %>
+  </div>
+</div>
+  
 
     <footer>
         <%- include('../partials/footer.ejs') %> <!--Includes the Footer element from the partials file-->

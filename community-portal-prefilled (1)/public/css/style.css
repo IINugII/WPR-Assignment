@@ -326,3 +326,61 @@ input-field input:focus,
     font-size: 0.9em;
     margin-bottom: 2px;
 }
+
+/* About Team Section */
+.team-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 2rem;
+}
+
+.member-card {
+  display: flex;
+  gap: 1.5rem;
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-left: 4px solid orangered;
+  border-radius: 0 8px 8px 0;
+}
+
+.member-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.member-info {
+  flex: 1;
+}
+
+.member-name {
+  color: orangered;
+  margin-bottom: 0.5rem;
+}
+
+.member-role {
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.member-details {
+  list-style: none;
+  padding-left: 0;
+}
+
+.member-details li {
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+
+.member-details strong {
+  color: #ddd;
+}
+
+.member-details ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}

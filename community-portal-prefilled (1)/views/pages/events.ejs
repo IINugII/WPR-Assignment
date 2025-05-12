@@ -3,26 +3,33 @@
 <body>
     <div id="EventsWrapper">
         <div id="AddNewEvent">
-            <input type="text" id="NewEventName" placeholder="Enter Event Name" required><br>
-            <input type="date" id="NewEventDate" placeholder="Enter the date of the New Event" required><br>
-            <textarea name="NewEventDetails" placeholder="Enter the details of your new event" required></textarea><br>
-            <input type="email" name="NewEventOrganiser" placeholder="Email address of event organiser">
+        <form method="POST" action="/events">
+            <input type="text" name="title" id="NewEventName" placeholder="Event Name" required>
+            <input type="date" name="date" id="NewEventDate" required>
+            <textarea name="description" placeholder="Event Details" required></textarea>
+            <input type="text" name="location" placeholder="Location" required>
+            <input type="email" name="organizer" placeholder="Organizer Email" required>
             <button type="submit" id="submitEvent">Add Event</button>
-        </div>
+        </form>
+    </div>
 
         <div id="DisplayEvent">
+            <% events.forEach(event => { %>
             <div id="Event1">
-                <!--All upcomming events should be displayed here, so this code should be dynamically generated-->
-                <!--These are just some placeholder values-->
-                <h2>Event Title</h2>
-                <p>Event Details</p>
-                <p>This event will start:</p>
-                <p>Event Date</p>
-                <p>This event is organised by:</p>
-                <p>Organiser</p>
+                <% if (event.image) { %>
+                 <img src="<%= event.image %>" alt="<%= event.title %>" class="event-image">
+                <% } %>
+                 <h3><%= event.title %></h3>
+                <div class="event-details">
+                   <p class="event-date">📅 <%= new Date(event.date).toLocaleDateString() %></p>
+                   <p class="event-location">📍 <%= event.location %></p>
+                 <% if (event.description) { %>
+                    <p class="event-description"><%= event.description %></p>
+                     <% } %>
+                </div>
             </div>
-        </div>
-    <div>
+  <% }); %>
+</div>
     <footer>
         <%- include('../partials/footer.ejs') %> <!--Includes the Footer element from the partials file-->
     </footer>
