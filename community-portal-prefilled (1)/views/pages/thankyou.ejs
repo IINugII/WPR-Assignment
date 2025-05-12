@@ -1,4 +1,19 @@
-<%- include('partials/header') %>
-<h1>Thank You!</h1>
-<p>Your message has been received. We’ll get back to you soon.</p>
-<%- include('partials/footer') %>
+<html lang="en">
+<%- include('../partials/header.ejs') %> <!--Includes the HEAD element from the partials file-->
+<body>
+    <!--Load a nice background image into the body-->
+
+    <div id="ThanksMessage">Thank you +name for saving your response</div>
+
+    <div id="OtherResponseOptions">
+        <h3>-------------------Here are some things you can do next-------------------</h3>
+        <button>Submit another response</button>
+        <button>View my response</button>
+        <button>Return back to the Home Page</button>
+    </div>
+
+    <footer>
+        <%- include('../partials/footer.ejs') %> <!--Includes the Footer element from the partials file-->
+    </footer>
+</body>
+</html>

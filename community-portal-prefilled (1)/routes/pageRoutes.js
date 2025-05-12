@@ -8,28 +8,28 @@ const eventsData = require('../data/eventsData');
 const contactMessages = [];
 
 router.get('/', (req, res) => {
-     res.render('views/pages/home', { upcomingEvents: eventsData.slice(0, 2) });
+     res.render('pages/home', { upcomingEvents: eventsData.slice(0, 2) });
 });
 
 router.get('/about', (req, res) => {
-    res.render('views/pages/about', { team: aboutData });
+    res.render('pages/about', { team: aboutData });
 });
 
 router.get('/events', (req, res) => {
-    res.render('views/pages/events', { events: eventsData });
+    res.render('pages/events', { events: eventsData });
 });
 
 router.get('/contact', (req, res) => {
-  res.render('views/pages/contact');
+  res.render('pages/contact');
 });
 
 router.post('/contact', (req, res) => {
   const { name, email, message } = req.body;
   contactMessages.push({ name, email, message });
-  res.redirect('views/pages/thank-you');
+  res.redirect('pages/thank-you');
 });
 router.get('/thankyou', (req, res) => {
-    res.render('views/pages/thank-you');
+    res.render('pages/thank-you');
 });
 
 module.exports = router;

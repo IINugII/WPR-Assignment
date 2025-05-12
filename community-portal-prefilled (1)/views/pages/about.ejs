@@ -1,8 +1,47 @@
-<%- include('partials/header') %>
-<h1>About Us</h1>
-<ul>
-  <% team.forEach(member => { %>
-    <li><strong><%= member.name %></strong> - <%= member.role %></li>
-  <% }) %>
-</ul>
-<%- include('partials/footer') %>
+<html lang="en">
+<%- include('../partials/header.ejs') %> <!--Includes the HEAD element from the partials file-->
+<body>
+    <div id="AboutCompany">
+        <h3>About Belgium Campus</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque modi itaque unde adipisci porro. Consequatur, beatae commodi ipsa magnam voluptate sit repellat veritatis accusamus iusto ex? Eligendi accusantium dicta pariatur!</p>
+        <br>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, porro iusto. Quos, sunt! Non consequuntur impedit deserunt voluptates sunt tempore, debitis dicta ducimus voluptas modi, enim iusto, doloremque id. Soluta.</p>
+        <br>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quas asperiores possimus incidunt recusandae atque saepe delectus accusamus aut doloribus! Fugiat a quibusdam saepe dolores officia excepturi ab labore laboriosam.</p>
+    </div>
+
+    <div id="AboutTeam">
+        <h3>About the team</h3>
+        <div id="Member1">
+            <p>Name: <!--Gather name from object stuffs--></p>
+            <p>Education: </p>
+            <p>Role:</p>
+            <p>Picture:</p>
+        </div>
+
+        <div id="Member2">
+            <p>Name: <!--Gather name from object stuffs--></p>
+            <p>Education: </p>
+            <p>Role:</p>
+        </div>
+
+        <div id="Member3">
+            <p>Name: <!--Gather name from object stuffs--></p>
+            <p>Education: </p>
+            <p>Role:</p>
+        </div>
+
+        <div id="Member4">
+            <p>Name: <!--Gather name from object stuffs--></p>
+            <p>Education: </p>
+            <p>Role:</p>
+        </div>
+    </div>
+
+    <footer>
+        <%- include('../partials/footer.ejs') %> <!--Includes the Footer element from the partials file-->
+    </footer>
+</body>
+</html>

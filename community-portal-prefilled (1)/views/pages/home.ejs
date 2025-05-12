@@ -1,9 +1,56 @@
-<%- include('partials/header') %>
-<h1>Welcome to our Community Portal</h1>
-<h3>Upcoming Events:</h3>
-<ul>
-  <% upcomingEvents.forEach(event => { %>
-    <li><strong><%= event.title %></strong> on <%= event.date %> at <%= event.location %></li>
-  <% }) %>
-</ul>
-<%- include('partials/footer') %>
+<html lang="en">
+<%- include('../partials/header.ejs') %> <!--Includes the HEAD element from the partials file-->
+<body>
+    <nav><!--The NAV on the home page is not included in the partials folder, as the home page nav looks different from the other pages-->
+        <div class="title-cards">
+            <div id="AboutCard">
+                <div class="Menu">
+                    <h2>About Us</h2>
+                    <button type="button"><a href="/about">View About</a></button>
+                </div>
+            </div>
+
+            <div id="EventsCard">
+                <div class="Menu">
+                    <h2>Events</h2>
+                    <button type="button"><a href="/events"></a>View Events</button>
+                </div>
+            </div>
+
+            <div id="ContactCard">
+                <div class="Menu">
+                    <h2>Contact Us</h2>
+                    <button type="button"><a href="/contact"></a>Get into Contact</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <h1 id="Welcome">Welcome to the Belgium Campus Community Portal</h1>
+
+    <h3>Upcoming Events:</h3>
+
+    <div id="UpcommingEvents">
+        <div id="DisplayEvent">
+            <!--The 5 approaching events should be displayed here-->
+            <!--These are just some placeholder values-->
+            <h2>Event Title</h2>
+            <p>Event Details</p>
+            <p>This event will start:</p>
+            <p>Event Date</p>
+            <p>This event is organised by:</p>
+            <p>Organiser</p>
+        </div>
+    </div>
+
+    <ul>
+      <% upcomingEvents.forEach(event => { %>
+      <li><strong><%= event.title %></strong> on <%= event.date %> at <%= event.location %></li>
+      <% }) %>
+    </ul>
+
+    <footer>
+        <%- include('../partials/footer.ejs') %> <!--Includes the Footer element from the partials file-->
+    </footer>
+</body>
+</html>

@@ -1,13 +1,30 @@
-<%- include('partials/header') %>
-<h1>All Events</h1>
-<ul>
-  <% events.forEach(event => { %>
-    <li>
-      <img src="<%= event.image %>" alt="<%= event.title %>" width="150">
-      <p><strong><%= event.title %></strong><br>
-      Date: <%= event.date %><br>
-      Location: <%= event.location %></p>
-    </li>
-  <% }) %>
-</ul>
-<%- include('partials/footer') %>
+<html lang="en">
+<%- include('../partials/header.ejs') %> <!--Includes the HEAD element from the partials file-->
+<body>
+    <div id="EventsWrapper">
+        <div id="AddNewEvent">
+            <input type="text" id="NewEventName" placeholder="Enter Event Name" required><br>
+            <input type="date" id="NewEventDate" placeholder="Enter the date of the New Event" required><br>
+            <textarea name="NewEventDetails" placeholder="Enter the details of your new event" required></textarea><br>
+            <input type="email" name="NewEventOrganiser" placeholder="Email address of event organiser">
+            <button type="submit" id="submitEvent">Add Event</button>
+        </div>
+
+        <div id="DisplayEvent">
+            <div id="Event1">
+                <!--All upcomming events should be displayed here, so this code should be dynamically generated-->
+                <!--These are just some placeholder values-->
+                <h2>Event Title</h2>
+                <p>Event Details</p>
+                <p>This event will start:</p>
+                <p>Event Date</p>
+                <p>This event is organised by:</p>
+                <p>Organiser</p>
+            </div>
+        </div>
+    <div>
+    <footer>
+        <%- include('../partials/footer.ejs') %> <!--Includes the Footer element from the partials file-->
+    </footer>
+</body>
+</html>

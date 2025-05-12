@@ -1,9 +1,47 @@
-<%- include('partials/header') %>
-<h1>Contact Us</h1>
-<form method="POST" action="/contact">
-  <label>Name: <input type="text" name="name" required></label><br>
-  <label>Email: <input type="email" name="email" required></label><br>
-  <label>Message:<br><textarea name="message" required></textarea></label><br>
-  <button type="submit">Send</button>
-</form>
-<%- include('partials/footer') %>
+<html lang="en">
+<%- include('../partials/header.ejs') %> <!--Includes the HEAD element from the partials file-->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><!--Insert an extra link to include icons used on the form-->
+<body id="ContactBody">
+  <div class="wrapper">
+    <form method="POST" action="/contact">
+      <h1>Contact us</h1>
+
+      <div class="input-box">
+        <div class="input-field">
+          <input type="text", placeholder="Name" required>
+          <i class='bx bxs-user'></i>
+        </div>
+
+        <div class="input-field">
+          <input type="text", placeholder="Surname" required>
+          <i class='bx bxs-user'></i>
+        </div>
+      </div>
+
+      <div class="input-box">
+        <div class="input-field">
+          <input type="email", placeholder="Email" required>
+          <i class='bx bxs-envelope' ></i>
+        </div>
+
+        <div class="input-field">
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <i class='bx bxs-message-detail' ></i>
+        </div>
+      </div>
+
+      <label><input type="checkbox">
+        I Agree to recieve feedback from Belgium Campus regarding my message, as well as special events that Belgium Campus offers
+      </label>
+
+      <button type="Submit">Submit</button>
+    </form>
+  </div>
+
+  <br>
+
+  <footer>
+    <%- include('../partials/footer.ejs') %> <!--Includes the Footer element from the partials file-->
+</footer>
+</body>
+</html>
