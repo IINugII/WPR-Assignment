@@ -1,7 +1,9 @@
+<%- include('partials/header') %>
 <h1>Contact Us</h1>
 <form method="POST" action="/contact">
-  <input type="text" name="name" placeholder="Your Name" required /><br />
-  <input type="email" name="email" placeholder="Your Email" required /><br />
-  <textarea name="message" placeholder="Your Message" required></textarea><br />
+  <label>Name: <input type="text" name="name" required></label><br>
+  <label>Email: <input type="email" name="email" required></label><br>
+  <label>Message:<br><textarea name="message" required></textarea></label><br>
   <button type="submit">Send</button>
 </form>
+<%- include('partials/footer') %>

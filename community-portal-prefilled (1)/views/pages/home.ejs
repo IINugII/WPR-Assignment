@@ -1,1 +1,9 @@
-<h1>Welcome to the Community Portal</h1>
+<%- include('partials/header') %>
+<h1>Welcome to our Community Portal</h1>
+<h3>Upcoming Events:</h3>
+<ul>
+  <% upcomingEvents.forEach(event => { %>
+    <li><strong><%= event.title %></strong> on <%= event.date %> at <%= event.location %></li>
+  <% }) %>
+</ul>
+<%- include('partials/footer') %>
