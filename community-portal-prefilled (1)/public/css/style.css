@@ -257,12 +257,11 @@ input-field input:focus,
     background-color: #ff4500cc;
 }
 
-/* Add some visual separation between form elements */
+
 #AddNewEvent br {
-    display: none; /* We'll handle spacing with margin instead */
+    display: none; 
 }
 
-/* Labels for better accessibility (you might want to add <label> elements) */
 #AddNewEvent label {
     display: block;
     margin-bottom: 5px;
@@ -383,4 +382,151 @@ input-field input:focus,
   list-style: disc;
   padding-left: 1.5rem;
   margin-top: 0.5rem;
+}
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||Thank you Page|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+#ThankYouPage {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                      url('../images/CampusLogoBig.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#ThanksMessage {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: orangered;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-bottom: 2px solid orangered;
+    max-width: 800px;
+}
+
+#OtherResponseOptions {
+    background-color: #1a1a1a;
+    border-left: 4px solid orangered;
+    padding: 30px;
+    border-radius: 0 8px 8px 0;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#OtherResponseOptions h3 {
+    color: #aaa;
+    margin-bottom: 25px;
+    font-weight: normal;
+    position: relative;
+}
+
+#OtherResponseOptions h3::before,
+#OtherResponseOptions h3::after {
+    content: "---";
+    color: orangered;
+    margin: 0 10px;
+}
+
+#OtherResponseOptions button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#OtherResponseOptions button:hover {
+    background-color: orangered;
+    border-color: orangered;
+    transform: translateX(5px);
+}
+
+footer {
+    margin-top: 50px;
+    color: #666;
+    font-size: 0.9rem;
+    padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #ThanksMessage {
+        font-size: 1.8rem;
+        padding: 15px;
+    }
+    
+    #OtherResponseOptions {
+        padding: 20px;
+    }
+    
+    #OtherResponseOptions button {
+        padding: 12px;
+    }
+}
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||Thank you Page|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+#ErrorBody {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-image: 
+        radial-gradient(circle at center, rgba(255, 69, 0, 0.1) 0%, rgba(0, 0, 0, 0.9) 70%),
+        url('../images/Background/CampusLogoBig.png');
+    background-size: cover;
+}
+
+#ErrorBody h1 {
+    font-size: 2.5rem;
+    color: orangered;
+    max-width: 800px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #333;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+#ErrorBody a {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 30px;
+    background-color: orangered;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#ErrorBody a:hover {
+    background-color: #ff4500cc;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+}
+
+footer {
+    margin-top: 50px;
+    color: #666;
+    font-size: 0.9rem;
+    padding: 20px;
 }
