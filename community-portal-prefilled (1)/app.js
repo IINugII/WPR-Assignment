@@ -19,6 +19,11 @@ app.set("views", path.join(__dirname, "views"));
 
 app.use("/", pageRoutes);
 
+app.post("/contact", (req, res) => {
+  const { name } = req.body; // Extract the name from the form submission
+  res.render("pages/thankyou", { name }); // Pass the name to the thankyou.ejs template
+});
+
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });

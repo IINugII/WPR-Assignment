@@ -3,13 +3,13 @@
 <body id="ThankYouPage">
     <!--Load a nice background image into the body-->
 
-    <div id="ThanksMessage">Thank you +name for getting in contact with us</div>
+    <div id="ThanksMessage">Thank you <%= name %> for getting in contact with us</div> <!-- Dynamically display the name -->
 
     <div id="OtherResponseOptions">
         <h3>Here are some things you can do next:</h3>
-        <button>Submit another response</button>
+        <button onclick="window.location.href='/contact'">Submit another response</button>
         <button>View my response</button>
-        <button>Return back to the Home Page</button>
+        <button onclick="window.location.href='/'">Return back to the Home Page</button>
     </div>
 
     <footer>
