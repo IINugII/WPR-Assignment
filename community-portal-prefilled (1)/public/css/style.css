@@ -113,12 +113,13 @@ body {
     border-left: 4px solid orangered;
 }
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||Contact Page|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-#ContactBody{
+#ContactBody {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     background-color: #000;
     min-height: 100vh;
+    margin: 0;
 }
 
 .wrapper {
@@ -129,7 +130,7 @@ body {
     border-radius: 0 8px 8px 0;
     color: white;
     padding: 40px 35px 55px;
-    margin: 0 10px;
+    margin: 20px 0;
 }
 
 .wrapper h1 {
@@ -237,6 +238,16 @@ input-field input:focus,
     .input-box .input-field {
         width: 100%;
     }
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #666;
+    font-size: 0.9rem;
 }
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||Events Page|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 #EventSWrapper {
@@ -589,4 +600,51 @@ footer {
     color: #666;
     font-size: 0.9rem;
     padding: 20px;
+}
+
+/* Header Styles */
+header {
+  width: 100%;
+  background-color: #1a1a1a;
+  padding: 15px 30px;
+  border-bottom: 2px solid orangered;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-button {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.nav-button:hover {
+  background-color: orangered;
+  color: white;
+  border-color: orangered;
+  transform: translateY(-2px);
 }

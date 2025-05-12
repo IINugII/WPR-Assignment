@@ -2,30 +2,6 @@
 <%- include('../partials/header.ejs') %> <!--Includes the HEAD element from the partials file-->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><!--Insert an extra link to include icons used on the form-->
 <body id="ContactBody">
-  <nav>                                <!--The NAV on the home page is not included in the partials folder, as the home page nav looks different from the other pages-->
-        <div class="title-cards">
-            <div id="AboutCard">
-                <div class="Menu">
-                    <h2>About Us</h2>
-                    <button type="button"><a href="/about">View About</a></button>
-                </div>
-            </div>
-
-            <div id="EventsCard">
-                <div class="Menu">
-                    <h2>Events</h2>
-                    <button type="button"><a href="/events">View Events</a></button>
-                </div>
-            </div>
-
-            <div id="ContactCard">
-                <div class="Menu">
-                    <h2>Contact Us</h2>
-                    <button type="button"><a href="/contact">Get into Contact</a></button>
-                </div>
-            </div>
-        </div>
-    </nav>
   <div class="wrapper">
     <!-- Fix form field names and structure -->
   <form method="POST" action="/contact">
