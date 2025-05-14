@@ -170,11 +170,6 @@ body {
     transition: all 0.3s;
 }
 
-input-field input:focus,
-.input-field textarea:focus {
-    border-color: orangered;
-    box-shadow: 0 0 8px rgba(255, 69, 0, 0.4);
-}
 
 .input-field input::placeholder,
 .input-field textarea::placeholder {
@@ -182,13 +177,37 @@ input-field input:focus,
     font-style: italic;
 }
 
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
 .input-field i {
     position: absolute;
     left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
     font-size: 20px;
     color: orangered;
+    top: 18px; 
+}
+
+.input-field textarea + i {
+    top: 15px;
+}
+
+.input-field input,
+.input-field textarea {
+    width: 100%;
+    padding: 15px 15px 15px 45px; 
+    background: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+}
+
+.input-field textarea {
+    min-height: 120px;
+    resize: vertical;
 }
 
 .wrapper button {
@@ -240,16 +259,19 @@ input-field input:focus,
     }
 }
 
-footer {
-    width: 100%;
-    text-align: center;
-    margin-top: auto;
-    padding: 20px;
-    background-color: #1a1a1a;
-    color: #666;
-    font-size: 0.9rem;
-}
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||Events Page|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+#NewEventHeading{
+    text-align: center;
+    font-size: 2rem;
+    color: orangered;
+    margin: 40px auto;
+    padding: 0 20px;
+    max-width: 1000px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid #333;
+    padding-bottom: 20px;
+}
+
 #EventSWrapper {
     font-family: 'Arial', sans-serif;
     max-width: 800px;
@@ -526,13 +548,6 @@ footer {
     transform: translateX(5px);
 }
 
-footer {
-    margin-top: 50px;
-    color: #666;
-    font-size: 0.9rem;
-    padding: 20px;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     #ThanksMessage {
@@ -548,7 +563,7 @@ footer {
         padding: 12px;
     }
 }
-/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||Thank you Page|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||Error 404Page|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 #ErrorBody {
     background-color: #000;
     color: #fff;
@@ -595,12 +610,7 @@ footer {
     box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
 }
 
-footer {
-    margin-top: 50px;
-    color: #666;
-    font-size: 0.9rem;
-    padding: 20px;
-}
+
 
 /* Header Styles */
 header {
@@ -647,4 +657,14 @@ header {
   color: white;
   border-color: orangered;
   transform: translateY(-2px);
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #666;
+    font-size: 0.9rem;
 }

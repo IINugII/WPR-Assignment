@@ -3,15 +3,16 @@
 <body>
     <div id="EventsWrapper">
         <div id="AddNewEvent">
-        <form method="POST" action="/events">
-            <input type="text" name="title" id="NewEventName" placeholder="Event Name" required>
-            <input type="date" name="date" id="NewEventDate" required>
-            <textarea name="description" placeholder="Event Details" required></textarea>
-            <input type="text" name="location" placeholder="Location" required>
-            <input type="email" name="organizer" placeholder="Organizer Email" required>
-            <button type="submit" id="submitEvent">Add Event</button>
-        </form>
-    </div>
+            <h3 id="NewEventHeading">Add a new Event</h3>
+            <form method="POST" action="/events">
+                <input type="text" name="title" id="NewEventName" placeholder="Event Name" required>
+                <input type="date" name="date" id="NewEventDate" required>
+                <textarea name="description" placeholder="Event Details" required></textarea>
+                <input type="text" name="location" placeholder="Location" required>
+                <input type="email" name="organizer" placeholder="Organizer Email" required>
+                <button type="submit" id="submitEvent">Add Event</button>
+            </form>
+        </div>
 
         <div id="DisplayEvent">
             <% events.forEach(event => { %>
