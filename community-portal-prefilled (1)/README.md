@@ -26,49 +26,53 @@ This project uses the provided boilerplate to build a clean, fully functional we
 - Git & GitHub for collaboration
 
 # Folder Structure
-community-portal/
-│
+community-portal-prefilled/
 ├── Data/
-│ ├── aboutData.js # Array for team info (About page)
-│ ├── contactSubmissions.js # Stores submitted contact form data
-│ └── eventsData.js # Array of event objects for Events page
-│
-├── node_modules/ # Installed dependencies (ignored in .gitignore)
-│
+│   ├── aboutData.js
+│   ├── contactSubmissions.js
+│   ├── eventsData.js
+├── node_modules/
 ├── public/
-│ ├── css/
-│ │ └── style.css # Main stylesheet
-│ └── images/
-│ ├── Background/
-│ │ ├── CampusLogo.png
-│ │ └── CampusLogoBig.png
-│ └── team/
-│ ├── 1.png
-│ ├── 2.png
-│ ├── 3.png
-│ ├── 4.png
-│ └── Team-Photos-Here.txt
-│
+│   ├── css/
+│   │   └── style.css
+│   ├── images/
+│   │   ├── Background/
+│   │   │   ├── CampusLogo.png
+│   │   │   └── CampusLogoBig.png
+│   │   ├── event_images/
+│   │   │   ├── alumni_networking_night.jpg
+│   │   │   ├── career_fair.jpg
+│   │   │   ├── charity_fun_run.jpg
+│   │   │   ├── community_cleanup.jpg
+│   │   │   ├── hackathon.jpg
+│   │   │   ├── international_food_festival.jpg
+│   │   │   ├── robotics_workshop.jpg
+│   │   │   ├── startup_pitch_competition.jpg
+│   │   │   └── winter_science_symposium.jpg
+│   │   ├── team/
+│   │   │   ├── 1.png
+│   │   │   ├── 2.png
+│   │   │   ├── 3.png
+│   │   │   ├── 4.png
+│   │   │   └── Team-Photos-Here.txt
 ├── routes/
-│ └── pageRoutes.js # All route handlers
-│
+│   └── pageRoutes.js
 ├── views/
-│ ├── pages/
-│ │ ├── 404.ejs
-│ │ ├── about.ejs
-│ │ ├── contact.ejs
-│ │ ├── events.ejs
-│ │ ├── home.ejs
-│ │ └── thankyou.ejs
-│ └── partials/
-│ ├── footer.ejs
-│ └── header.ejs
-│
-├── .gitignore # Ignore node_modules and unnecessary files
-├── app.js # Main Express application
-├── package.json
+│   ├── pages/
+│   │   ├── 404.ejs
+│   │   ├── about.ejs
+│   │   ├── contact.ejs
+│   │   ├── events.ejs
+│   │   ├── home.ejs
+│   │   └── thankyou.ejs
+│   ├── partials/
+│   │   ├── footer.ejs
+│   │   └── header.ejs
+├── .gitignore
+├── app.js
 ├── package-lock.json
-└── README.md # Project overview and instructions
+├── package.json
+└── README.md
 
 ## Setup Instructions
 1. Install dependencies
