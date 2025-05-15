@@ -419,28 +419,40 @@ body {
     margin-bottom: 2px;
 }
 
-/* About Team Section */
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||About Page|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 .team-grid {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .member-card {
-  display: flex;
-  gap: 1.5rem;
   background: #1a1a1a;
-  padding: 1.5rem;
+  padding: 2rem;
   border-left: 4px solid orangered;
   border-radius: 0 8px 8px 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 69, 0, 0.1);
 }
 
 .member-photo {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 50%;
+  border: 3px solid orangered;
+  margin: 0 auto 1.5rem;
+  display: block;
 }
 
 .member-info {
@@ -450,31 +462,98 @@ body {
 .member-name {
   color: orangered;
   margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .member-role {
-  color: #888;
-  margin-bottom: 1rem;
+  color: #aaa;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-style: italic;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.member-role::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 1px;
+  background: #333;
 }
 
 .member-details {
   list-style: none;
   padding-left: 0;
+  margin-top: 1.5rem;
 }
 
 .member-details li {
-  margin-bottom: 0.8rem;
-  line-height: 1.4;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
 }
 
 .member-details strong {
   color: #ddd;
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
 }
 
 .member-details ul {
-  list-style: disc;
-  padding-left: 1.5rem;
+  list-style: none;
+  padding-left: 1rem;
   margin-top: 0.5rem;
+}
+
+.member-details ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.member-details ul li::before {
+  content: "•";
+  color: orangered;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.member-details a {
+  color: orangered;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.member-details a:hover {
+  color: #ff6b35;
+  text-decoration: underline;
+}
+
+.team-header h1 {
+  color: orangered;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#TeamHeading{
+    text-align: center;
+    font-size: 2rem;
+    color: orangered;
+    margin: 40px auto;
+    padding: 0 20px;
+    max-width: 1000px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid #333;
+    padding-bottom: 20px;
 }
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||Thank you Page|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 #ThankYouPage {

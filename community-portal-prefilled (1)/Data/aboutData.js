@@ -1,21 +1,21 @@
 module.exports = [
   { 
-    name: 'Alex Johnson',
+    name: 'Joshua Romalho',
     role: 'Team Lead',
-    education: 'MSc Computer Science',
+    education: 'Bachelor of Computing',
     responsibilities: [
       'Project Coordination',
       'Architecture Design',
       'Client Communication'
     ],
-    bio: 'Full-stack developer with 8 years experience leading tech teams',
+    bio: 'Full-stack developer with resposibilities and leading and guiding the project and the team',
     image: '/images/team/4.png',
-    email: 'alex.j@bcampus.edu'
+    email: '601535@student.belgiumcampus.ac.za'
   },
   { 
-    name: 'Samira Chen',
+    name: 'Thian du Plessis',
     role: 'Backend Developer',
-    education: 'BEng Software Engineering',
+    education: 'Bachelor of Computing',
     responsibilities: [
       'Database Design',
       'API Development',
@@ -23,25 +23,25 @@ module.exports = [
     ],
     bio: 'Node.js specialist focused on scalable solutions',
     image: '/images/team/2.png',
-    email: 'schen@bcampus.edu'
+    email: '601125@student.belgiumcampus.ac.za'
   },
   { 
-    name: 'Jordan Miller',
+    name: 'Marco Jacobs',
     role: 'Frontend Developer',
-    education: 'BSc Interactive Media',
+    education: 'Bachelor of Computing',
     responsibilities: [
       'UI/UX Design',
       'Client-Side Logic',
       'Performance Optimization'
     ],
-    bio: 'Passionate about accessible web design',
+    bio: 'Passionate about accessible web design, and the color orange',
     image: '/images/team/3.png',
-    email: 'jmiller@bcampus.edu'
+    email: '600266@student.belgiumcampus.ac.za'
   },
   { 
-    name: 'Priya Patel',
+    name: 'Reinhardt van Vollenstee',
     role: 'Data Manager',
-    education: 'MSc Data Science',
+    education: 'Bachelor of Computing',
     responsibilities: [
       'Database Architecture',
       'Analytics Integration',
@@ -49,6 +49,6 @@ module.exports = [
     ],
     bio: 'Big data specialist with ML experience',
     image: '/images/team/1.png',
-    email: 'ppatel@bcampus.edu'
+    email: '578095@student.belgiumcampus.ac.za'
   }
 ];
